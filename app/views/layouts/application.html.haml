@@ -20,8 +20,8 @@
       .dropdown
         = image_tag 'default-avatar.png', class: 'header_avatar dropbtn'
         .dropdown-content
-          %a{:href => "#"} プロフィール
-          %a{:href => "#"} ログアウト
+          = link_to 'プロフィール', '#'
+          = link_to 'ログアウト', destroy_user_session_path, method: 'delete'
     - if flash.present?
       .flash
         - flash.each do |key, value|
